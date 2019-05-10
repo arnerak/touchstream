@@ -539,7 +539,7 @@ ts_xorg_client_create(
 	res->mux = mux;
 
 	char name[128];
-	strcpy(name, param);
+	strncpy(name, param, 127);
 	char * where = strchr(name, '=');
 	if (where) {
 		*where = 0;
